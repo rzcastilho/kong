@@ -1,0 +1,10 @@
+{
+  "service": {
+    "name": "{{ printf "%s/consul/service/name" (env "APPLICATION_NAME") | key }}",
+    "port": {{ printf "%s/consul/service/port" (env "APPLICATION_NAME") | key }},
+    "check": {
+      "http": "{{ printf "%s/consul/service/check/http" (env "APPLICATION_NAME") | key }}",
+      "interval": "10s"
+    }
+  }
+}

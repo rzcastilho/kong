@@ -1,0 +1,10 @@
+{
+  "service": {
+    "name": "kong-api-gateway",
+    "port": 8001,
+    "check": {
+      "http": "http://localhost:8001",
+      "interval": "10s"
+    }
+  }
+}

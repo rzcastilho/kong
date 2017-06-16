@@ -1,0 +1,1 @@
+/etc/consul/service.ctmpl:/etc/consul/service.json:consul reload
