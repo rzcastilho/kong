@@ -8,7 +8,7 @@ ENV KONG_DASHBOARD_VERSION "v2"
 ENV APPLICATION_DEFAULT_NAME "kong-api-gateway"
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends openssl libpcre3 procps perl wget \
+    && apt-get install -y --no-install-recommends openssl libpcre3 procps perl wget netcat-openbsd \
     && wget --no-check-certificate https://github.com/Mashape/kong/releases/download/${KONG_VERSION}/kong-${KONG_VERSION}.jessie_all.deb \
     && dpkg -i kong-${KONG_VERSION}.jessie_all.deb \
     && rm kong-${KONG_VERSION}.jessie_all.deb \
