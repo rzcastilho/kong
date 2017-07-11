@@ -18,10 +18,6 @@ RUN apt-get update \
     && rm nodesource_setup.sh \
     && apt-get install -y --no-install-recommends nodejs \
     && npm install -g kong-dashboard@${KONG_DASHBOARD_VERSION} \
-    && echo "pt_BR.UTF-8 UTF-8" > /etc/locale.gen \
-    && locale-gen pt_BR.UTF-8 \
-    && rm /etc/localtime \
-    && ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/*
 

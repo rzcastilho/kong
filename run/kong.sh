@@ -1,12 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
-# Verify if APPLICATION_NAME exists, if not exists set default value
-if [ -z ${APPLICATION_NAME+x} ]; then
-	APPLICATION_NAME=$APPLICATION_DEFAULT_NAME
-fi
-export APPLICATION_NAME
+source /etc/environment
 
 DAEMON=kong
 ARGS="start --vv"
